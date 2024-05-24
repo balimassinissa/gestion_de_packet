@@ -10,6 +10,7 @@ def home():
 @app.route("/generate_distribution", methods=["POST"])
 def generate_distribution():
     belts = [
+        int(request.form["belt125"]),
         int(request.form["belt120"]),
         int(request.form["belt115"]),
         int(request.form["belt110"]),
