@@ -1,5 +1,5 @@
 def distribute_belts(belts):
-    categories = [125, 120, 115, 110, 105, 100]
+    categories = [130,125, 120, 115, 110, 105, 100]
     total_belts = sum(belts)
     num_packs = total_belts // 10
 
@@ -30,7 +30,7 @@ def distribute_belts(belts):
 
 # Exemple d'utilisation
 if __name__ == "__main__":
-    belts = [5,10, 10, 5, 5, 6]  # Ceintures de 120, 115, 110, 105, 100 respectivement
+    belts = [12, 5,10, 10, 5, 5, 6]  # Ceintures de 120, 115, 110, 105, 100 respectivement
     print("SUM:", sum(belts))
     try:
         distribution = distribute_belts(belts)
