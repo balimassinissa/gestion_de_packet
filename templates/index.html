@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de paquet de ceinture</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion de paquet de ceinture</h1>
+        <form id="beltForm">
+            <div class="form-group">
+                <label for="belt120">Ceintures 120:</label>
+                <input type="number" class="form-control" id="belt120" name="belt120" min="0" value="0">
+            </div>
+            <div class="form-group">
+                <label for="belt115">Ceintures 115:</label>
+                <input type="number" class="form-control" id="belt115" name="belt115" min="0" value="0">
+            </div>
+            <div class="form-group">
+                <label for="belt110">Ceintures 110:</label>
+                <input type="number" class="form-control" id="belt110" name="belt110" min="0" value="0">
+            </div>
+            <div class="form-group">
+                <label for="belt105">Ceintures 105:</label>
+                <input type="number" class="form-control" id="belt105" name="belt105" min="0" value="0">
+            </div>
+            <div class="form-group">
+                <label for="belt100">Ceintures 100:</label>
+                <input type="number" class="form-control" id="belt100" name="belt100" min="0" value="0">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generateDistribution()">Générer Distribution</button>
+        </form>
+
+        <div id="distributionResult" class="hidden mt-4">
+            <h2>Résultat de la distribution:</h2>
+            <div id="packs" class="list-group"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
