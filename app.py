@@ -11,6 +11,7 @@ def home():
 def generate_distribution():
     belts = [
         int(request.form["beltGT"]),
+        int(request.form["belt125"]),
         int(request.form["belt120"]),
         int(request.form["belt115"]),
         int(request.form["belt110"]),
