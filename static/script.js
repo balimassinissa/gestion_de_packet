@@ -9,8 +9,23 @@ function generateDistribution() {
         document.getElementById("packs").innerHTML = "";
         data.forEach((pack, index) => {
             var packDiv = document.createElement("div");
-            packDiv.className = "list-group-item";
-            packDiv.textContent = `Paquet ${index + 1}: ${pack.join(", ")}`;
+            packDiv.className = "pack";
+            var packHeader = document.createElement("div");
+            packHeader.className = "pack-header";
+            packHeader.textContent = `Paquet ${index + 1}`;
+            packDiv.appendChild(packHeader);
+
+            var packContent = document.createElement("div");
+            packContent.innerHTML = `
+                <p>Ceintures 125 cm: ${pack[0]}</p>
+                <p>Ceintures 120 cm: ${pack[1]}</p>
+                <p>Ceintures 115 cm: ${pack[2]}</p>
+                <p>Ceintures 110 cm: ${pack[3]}</p>
+                <p>Ceintures 105 cm: ${pack[4]}</p>
+                <p>Ceintures 100 cm: ${pack[5]}</p>
+            `;
+            packDiv.appendChild(packContent);
+
             document.getElementById("packs").appendChild(packDiv);
         });
         document.getElementById("distributionResult").classList.remove("hidden");
