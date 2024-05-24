@@ -18,12 +18,12 @@ function generateDistribution() {
             var packContent = document.createElement("div");
             packContent.innerHTML = `
                 <p>Ceintures GT    : ${pack[0]}</p>
-                <p>Ceintures 125 cm: ${pack[0]}</p>
-                <p>Ceintures 120 cm: ${pack[1]}</p>
-                <p>Ceintures 115 cm: ${pack[2]}</p>
-                <p>Ceintures 110 cm: ${pack[3]}</p>
-                <p>Ceintures 105 cm: ${pack[4]}</p>
-                <p>Ceintures 100 cm: ${pack[5]}</p>
+                <p>Ceintures 125 cm: ${pack[1]}</p>
+                <p>Ceintures 120 cm: ${pack[2]}</p>
+                <p>Ceintures 115 cm: ${pack[3]}</p>
+                <p>Ceintures 110 cm: ${pack[4]}</p>
+                <p>Ceintures 105 cm: ${pack[5]}</p>
+                <p>Ceintures 100 cm: ${pack[6]}</p>
             `;
             packDiv.appendChild(packContent);
 
